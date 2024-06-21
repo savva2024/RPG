@@ -13,8 +13,6 @@ public abstract class Human extends Living {
 	@Override
 	public void attack(Living target) {
 		// 3-1. Living型のtargetインスタンスを「攻撃する相手のインスタンス」とします
-		target.name = target.getName();
-		target.hp = target.getHp();
 		// ▼▼▼実装結果確認用メッセージ▼▼▼
 			// System.out.println("相手の名前" + target.name);
 			// System.out.println("相手のhp" + target.hp + "←★最初の表の値が引き継がれず、再取得されている");
