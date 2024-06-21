@@ -7,7 +7,7 @@ public abstract class Human extends Living {
 	// Livingクラスで定義したコンストラクタを利用
 	public Human(String name, String weapon) {
 		super(name, weapon);
-		}
+	}
 
 	// attackメソッドをオーバーライド、コメント文の内容を実装
 	@Override
@@ -37,7 +37,7 @@ public abstract class Human extends Living {
 			//  System.out.println("自分の攻撃力(-1)" + offensive);
 			// ▲▲▲実装結果確認用メッセージ▲▲▲
 		// コンソールにステータスを表示
-			System.out.println("\n「" + name + "」が「" + weapon + "」で攻撃！「" + target.name + "」に" + damage + "のダメージを与えた。\nしかし自分の攻撃力も1減少した。");
+		System.out.println("\n「" + name + "」が「" + weapon + "」で攻撃！「" + target.name + "」に" + damage + "のダメージを与えた。\nしかし自分の攻撃力も1減少した。");
 	}
 	
 }

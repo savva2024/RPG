@@ -62,10 +62,10 @@ public class Main {
 			human.attack(monster);
 			// モンスターのHPが0以下になれば、モンスターは倒れ、そのモンスターをモンスターグループから削除
 			int a = monster.getHp();
-				if (a <= 0) {
-					monsters.remove(monsters.indexOf(monster));
-					System.out.println("\n ★ 「" + monster.getName() + "」は倒れた。");
-				}
+			if (a <= 0) {
+				monsters.remove(monsters.indexOf(monster));
+				System.out.println("\n ★ 「" + monster.getName() + "」は倒れた。");
+			}
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
 			if (monsters.size() == 0) {
 			 	break;
@@ -80,10 +80,10 @@ public class Main {
 			monster.attack(human);
 			// 人間のHPが0以下になれば、人間は倒れ、その人間を人間グループから削除
 			int b = human.getHp();
-				if (b <= 0) {
-					humans.remove(humans.indexOf(human));
-					System.out.println("\n ★ 「" + human.getName() + "」は倒れた。");
-				}
+			if (b <= 0) {
+				humans.remove(humans.indexOf(human));
+				System.out.println("\n ★ 「" + human.getName() + "」は倒れた。");
+			}
 			// 人間グループに誰もいなくなれば、人間グループの敗北
 			if (humans.size() == 0) {
 			 	break;
