@@ -61,13 +61,13 @@ public class Main {
 			// 選ばれた人間が、選ばれたモンスターを攻撃
 			human.attack(monster);
 			// モンスターのHPが0以下になれば、モンスターは倒れ、そのモンスターをモンスターグループから削除
-			int a = monster.getHp();
-			if (a <= 0) {
+			if (monster.getHp() <= 0) {
 				monsters.remove(monsters.indexOf(monster));
 				System.out.println("\n ★ 「" + monster.getName() + "」は倒れた。");
 			}
 			// モンスターグループに誰もいなくなれば、人間グループの勝利
 			if (monsters.size() == 0) {
+				System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n" + "\n #### 人間達は勝利した！！ ####");
 			 	break;
 			}
 			
@@ -86,6 +86,7 @@ public class Main {
 			}
 			// 人間グループに誰もいなくなれば、人間グループの敗北
 			if (humans.size() == 0) {
+				System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n" + "\n #### 人間達は敗北した。。。 ####");
 			 	break;
 			}
 			// 現在の各グループの状態を一覧表示
@@ -94,7 +95,6 @@ public class Main {
 			// ループ変数を1増やす
 			count++;
 		}
-		System.out.println("\n★★ ==== 決着がついた！！ ==== ★★\n" + "\n #### 人間達は勝利した！！ ####");
 		// 現在の各グループの状態を一覧表示
 		showGroupInfos(humans, monsters);
 	}
